@@ -57,6 +57,10 @@ class Testwin(QWidget):
     
     def timer2Event(self):
         self.text_timer.setText(time.toString("hh:mm:ss")[6:8])
+    
+    def timer_final(self):
+        time = QTime(0,1,0)
+        self.timer.timeout.connect(self.timer3Event)
 
     def Timer3Event(self):
         if int(time.toString("hh:mm:ss")[6:8]) >= 45:
