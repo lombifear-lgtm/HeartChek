@@ -45,7 +45,7 @@ class Testwin(QWidget):
         global time
         time = time.addSecs(-1)
         self.text_timer.setText(Time.toString("hh:mm:ss"))
-        self.text_timer.setFont(QFont("Times", 3d, QFont.Bold))
+        self.text_timer.setFont(QFont("Times", 36, QFont.Bold))
         self.text_timer.setStyleSheet("color: rgb(0,0,0")
         if time.toString("hh:mm:ss") == "00:00:00":
             self.timer.stop()
