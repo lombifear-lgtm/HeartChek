@@ -41,7 +41,15 @@ class MainWin(QWidget):
        self.move(win_x, win_y)
 
 class Testwin(QWidget):
-    def timer1Event(Self):
+    def timer_test(self):
+        global time 
+        time = QTime(0, 1, 0)
+        self.timer = QTimer()
+        self.time.timeout.connect(self.timer3Event)
+        self.timer.start(1000)
+       
+       
+     def timer1Event(Self):
         global time
         time = time.addSecs(-1)
         self.text_timer.setText(Time.toString("hh:mm:ss"))
